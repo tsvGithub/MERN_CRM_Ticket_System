@@ -1,11 +1,14 @@
 import React from "react";
 
 import TicketTable from "../../components/ticket-table/TicketTable.component";
+import Breadcrumb from "../../components/breadcrumb/Breadcrumb.component";
 import tickets from "../../assets/data/dummy-tickets.json";
 
 const Dashboard = () => {
+  //   console.log(Dashboard);
   return (
     <section>
+      <Breadcrumb page="Dashboard" />
       <button>Add New Ticket</button>
       <article>
         <div>Total tickets: 50</div>
