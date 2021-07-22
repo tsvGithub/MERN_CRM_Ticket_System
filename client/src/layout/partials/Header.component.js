@@ -4,7 +4,7 @@ import logo from "../../assets/img/MrsZhur.png";
 const Header = () => {
   return (
     <header>
-      <img src={logo} alt="Logo" width="50px" />
+      <img className="logo" src={logo} alt="Logo" />
       <nav>
         <ul>
           <li>
