@@ -26,7 +26,9 @@ const AddTicketForm = ({ handleSubmit, handleChange, formData }) => {
         <label htmlFor="detail">Detail</label>
         <input type="textarea" name="detail" row="5" value={formData.detail} onChange={handleChange} required />
       </form>
-      <button type="submit">Send</button>
+      <button className="btn" onSubmit={handleSubmit} type="submit">
+        Send
+      </button>
     </div>
   );
 };
