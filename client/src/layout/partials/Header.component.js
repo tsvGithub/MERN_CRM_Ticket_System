@@ -1,20 +1,27 @@
 import React from "react";
 import logo from "../../assets/img/MrsZhur.png";
 
+import { Link, useHistory } from "react-router-dom";
+
 const Header = () => {
+  const history = useHistory();
+  const logOut = () => {
+    history.push("/");
+  };
   return (
     <header>
       <img className="logo" src={logo} alt="Logo" />
       <nav>
         <ul>
           <li>
-            <a href="/dashboard">Dashboard</a>
+            <Link to="/dashboard">Dashboard</Link>
           </li>
           <li>
-            <a href="/tickets">Tickets</a>
+            <Link to="/tickets">Tickets</Link>
           </li>
           <li>
-            <a href="/logout">Logout</a>
+            <Link onClick={logOut}>Logout</Link>
+            {/* <a href="/logout">Logout</a> */}
           </li>
         </ul>
       </nav>

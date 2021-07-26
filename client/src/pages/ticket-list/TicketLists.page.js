@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Breadcrumb from "../../components/breadcrumb/Breadcrumb.component";
 import SearchForm from "../../components/search-form/SearcForm.component";
@@ -26,7 +27,9 @@ const TicketLists = () => {
   return (
     <div className="container">
       <Breadcrumb page="Ticket Lists" />
-      <button className="btn">Add New Ticket</button>
+      <Link to="/add-ticket">
+        <button className="btn">Add New Ticket</button>
+      </Link>
       <SearchForm handleChange={handleChange} str={str} />
 
       <hr />

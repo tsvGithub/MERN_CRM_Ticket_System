@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import TicketTable from "../../components/ticket-table/TicketTable.component";
 import Breadcrumb from "../../components/breadcrumb/Breadcrumb.component";
@@ -9,7 +10,9 @@ const Dashboard = () => {
   return (
     <section>
       <Breadcrumb page="Dashboard" />
-      <button>Add New Ticket</button>
+      <Link to="/add-ticket">
+        <button>Add New Ticket</button>
+      </Link>
       <article>
         <div>Total tickets: 50</div>
         <div>Pending tickets: 10</div>

@@ -1,16 +1,27 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
 import tickets from "../../assets/data/dummy-tickets.json";
 import Breadcrumb from "../../components/breadcrumb/Breadcrumb.component";
 import MessageHistory from "../../components/message-history/MessageHistory.component";
 import UpdateTicket from "../../components/update-ticket/UpdateTicket.component";
 
-const ticket = tickets[0];
+// const ticket = tickets[0];
 
 const Ticket = () => {
+  const { tId } = useParams();
   //state:
   const [message, setMessage] = useState("");
+  const [ticket, setTicket] = useState("");
   //refresh page
-  useEffect(() => {}, [message]);
+  useEffect(() => {
+    for (let i = 0; i < tickets.length; i++) {
+      if (tickets[i].id === tId) {
+        setTicket(tickets[i]);
+        continue;
+      }
+    }
+  }, [message, tId]);
   //-------------------
   const handleChange = (e) => {
     setMessage(e.target.value);
@@ -31,7 +42,7 @@ const Ticket = () => {
         <button>Close Ticket</button>
       </div>
 
-      <MessageHistory msg={ticket.history} />
+      {ticket.history && <MessageHistory msg={ticket.history} />}
       <UpdateTicket msg={message} handleChange={handleChange} handleSubmit={handleSubmit} />
     </div>
   );
