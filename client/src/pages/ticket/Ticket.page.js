@@ -10,18 +10,21 @@ import UpdateTicket from "../../components/update-ticket/UpdateTicket.component"
 
 const Ticket = () => {
   const { tId } = useParams();
+  console.log(tickets, tId);
+
   //state:
   const [message, setMessage] = useState("");
   const [ticket, setTicket] = useState("");
   //refresh page
   useEffect(() => {
     for (let i = 0; i < tickets.length; i++) {
-      if (tickets[i].id === tId) {
+      if (tickets[i].id == tId) {
         setTicket(tickets[i]);
         continue;
       }
     }
   }, [message, tId]);
+  // console.log(ticket);
   //-------------------
   const handleChange = (e) => {
     setMessage(e.target.value);

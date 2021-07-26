@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 const TicketTable = ({ tickets }) => {
+  console.log(tickets);
   return (
     <table>
       <thead>
@@ -20,7 +21,7 @@ const TicketTable = ({ tickets }) => {
               <td>{row.id}</td>
               {/* <td>{row.subject}</td> */}
               <td>
-                <Link to={`/ticket/${row.id}`}>{row.subject}</Link>
+                <Link to={`/ticket/${row.id}`}>{row.subject}</Link>{" "}
               </td>
               <td>{row.status}</td>
               <td>{row.addedAt}</td>
