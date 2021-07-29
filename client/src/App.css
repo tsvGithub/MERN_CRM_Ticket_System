@@ -1,3 +1,62 @@
-.App {
-  text-align: center;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*:focus,
+*:active,
+*:hover,
+*:visited,
+*:focus-visible,
+*:focus-within,
+*:focus:not(:focus-visible),
+*::before,
+*::after {
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+body {
+  background-color: lightgoldenrodyellow;
+  color: black;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 0 3rem;
+}
+header > img.logo {
+  width: 7rem;
+}
+header > nav > ul {
+  display: flex;
+  list-style: none;
+}
+header > nav > ul > li {
+  display: block;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+header > nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: rgb(34, 12, 131);
+  border-bottom: 1px dashed rgb(34, 12, 131);
+}
+
+footer {
+  justify-content: center;
+  margin-bottom: 0;
+  padding: 1.5rem;
+  font-size: 0.8rem;
 }

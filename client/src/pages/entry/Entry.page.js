@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./entry.style.css";
+// import "./entry.style.css";
 
 import LoginForm from "../../components/login/Login.component";
 import ResetPassword from "../../components/password-reset/PasswordReset.component";

@@ -4,15 +4,18 @@ import Footer from "./partials/Footer.component";
 
 const DefaultLayout = ({ children }) => {
   return (
-    <div className="default-layout">
-      <header className="header">
-        <Header />
-      </header>
-      <main className="main">{children}</main>
+    <div
+    // className="default-layout"
+    >
+      <Header />
 
-      <footer className="footer">
-        <Footer />
-      </footer>
+      <main
+      // className="main"
+      >
+        {children}
+      </main>
+
+      <Footer />
     </div>
   );
 };
