@@ -3,12 +3,15 @@ import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 const TicketTable = ({ tickets }) => {
+  let todaysDate = new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate();
+
   console.log(tickets);
   return (
     <table>
+      <caption>{todaysDate} CRM Tickets Report </caption>
       <thead>
         <tr>
-          <th>#</th>
+          <th></th>
           <th>Subjects</th>
           <th>Status</th>
           <th>Opened Date</th>

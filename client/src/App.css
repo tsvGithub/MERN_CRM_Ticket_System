@@ -22,6 +22,13 @@
 
 body {
   background-color: lightgoldenrodyellow;
+  /* color: black; */
+  color: #333;
+  font-size: 1.3rem;
+}
+/************GLobal *********/
+ul > li > a {
+  text-decoration: none;
   color: black;
 }
 
@@ -45,18 +52,96 @@ header > nav > ul > li {
   padding: 1.5rem;
   font-size: 1.5rem;
 }
-header > nav > ul > li > a {
+/* header > nav > ul > li > a {
   text-decoration: none;
   color: black;
-}
+} */
 a:hover {
-  color: rgb(34, 12, 131);
-  border-bottom: 1px dashed rgb(34, 12, 131);
+  color: #6967bf;
+  border-bottom: 1px dashed #6967bf;
+}
+/***********  MAIN  *********/
+main {
+  margin: 2rem 3rem;
+  /* padding: 1rem 0; */
+}
+ul.breadcrumb {
+  display: flex;
+  list-style: none;
+}
+ul.breadcrumb > li {
+  display: block;
+  padding: 0.5rem 0.2rem;
+  font-size: 1rem;
+}
+article.ticket-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.3rem auto;
+}
+article.ticket-status > div {
+  width: 50%;
+  text-align: center;
+}
+article.ticket-status > a:hover {
+  border-bottom: 0px;
 }
 
+article.ticket-status > a > button {
+  /* justify-self: flex-start; */
+  width: 21rem;
+  height: 3rem;
+  /* background-color: transparent; */
+  border: 1px solid #ffc919;
+  border-radius: 1rem;
+  background-color: #ffc919;
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table caption {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 2rem 0;
+}
+thead th {
+  width: 25%;
+  padding: 8px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2%;
+  background-color: #fff;
+}
+thead th:first-child {
+  width: 10%;
+}
+thead th:nth-child(2) {
+  width: 40%;
+}
+th,
+td {
+  border-bottom: 1px solid #333;
+}
+tr:last-child {
+  border-bottom: 2px solid #333;
+}
+tr:nth-of-type(even) {
+  background-color: aqua;
+  font-weight: semi-bold;
+}
+/********** Footer ********/
 footer {
   justify-content: center;
-  margin-bottom: 0;
+  margin: 0;
   padding: 1.5rem;
   font-size: 0.8rem;
 }

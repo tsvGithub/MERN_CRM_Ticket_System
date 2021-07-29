@@ -8,20 +8,23 @@ import tickets from "../../assets/data/dummy-tickets.json";
 const Dashboard = () => {
   //   console.log(Dashboard);
   return (
-    <section>
+    <main>
       <Breadcrumb page="Dashboard" />
-      <Link to="/add-ticket">
-        <button>Add New Ticket</button>
-      </Link>
-      <article>
-        <div>Total tickets: 50</div>
-        <div>Pending tickets: 10</div>
-        <div>Recently Added tickets: 10</div>
-        <hr />
 
-        <TicketTable tickets={tickets} />
+      <article className="ticket-status">
+        <div>
+          <p>Total tickets: 50</p>
+          <p>Pending tickets: 10</p>
+          <p>Recently Added tickets: 10</p>
+        </div>
+
+        <Link to="/add-ticket">
+          <button>Add New Ticket</button>
+        </Link>
       </article>
-    </section>
+
+      <TicketTable tickets={tickets} />
+    </main>
   );
 };
 
