@@ -35,19 +35,20 @@ const Ticket = () => {
   };
 
   return (
-    <div className="container">
+    <main>
       <Breadcrumb page="Ticket" />
-      <div className="wrapper">
+      <article className="ticket-status ticket">
         <div className="subject">Subject: {ticket.subject}</div>
         <div className="date">Ticket Opened: {ticket.addedAt}</div>
         <div className="status">Status: {ticket.status}</div>
 
-        <button>Close Ticket</button>
-      </div>
+        <button title="Close Ticket ">✖</button>
+      </article>
 
-      {ticket.history && <MessageHistory msg={ticket.history} />}
+      <article className="message-history">{ticket.history && <MessageHistory msg={ticket.history} />}</article>
+
       <UpdateTicket msg={message} handleChange={handleChange} handleSubmit={handleSubmit} />
-    </div>
+    </main>
   );
 };
 

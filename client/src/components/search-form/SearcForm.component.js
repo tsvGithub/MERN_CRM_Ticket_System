@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const SearchForm = ({ handleChange, str }) => {
   return (
     <div className="form">
-      <form action="">
+      <form className="serchForm" action="">
         <label htmlFor="searchStr">Search:</label>
         <input type="search" name="searchStr" value={str} onChange={handleChange} placeholder="Search..." />
       </form>

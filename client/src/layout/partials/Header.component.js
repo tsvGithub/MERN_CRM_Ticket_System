@@ -10,7 +10,8 @@ const Header = () => {
   };
   return (
     <header>
-      <img className="logo" src={logo} alt="Logo" title="Flaticon Logo made by www.flaticon.com" />
+      <h1>CRM</h1>
+      {/* <img className="logo" src={logo} alt="Logo" title="Flaticon Logo made by www.flaticon.com" /> */}
       <nav>
         <ul>
           <li>

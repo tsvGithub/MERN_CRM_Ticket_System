@@ -21,53 +21,52 @@
 }
 
 body {
-  background-color: lightgoldenrodyellow;
-  /* color: black; */
+  background-color: #efefe3;
   color: #333;
   font-size: 1.3rem;
 }
-/************GLobal *********/
-ul > li > a {
+/************  GLobal  *********/
+ul {
+  list-style: none;
+}
+/* ul > li > */
+a {
   text-decoration: none;
   color: black;
 }
+a:hover {
+  color: #6967bf;
+  border-bottom: 1px dashed #6967bf;
+}
 
+/*********** HEADERS ********/
 header,
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 0;
+  /* margin: 2rem 0 1rem; */
   padding: 0 3rem;
 }
-header > img.logo {
+/* header > img.logo {
   width: 7rem;
+} */
+header > h1 {
+  font-family: "MonteCarlo", cursive;
+  font-size: 5rem;
 }
 header > nav > ul {
   display: flex;
-  list-style: none;
-}
-header > nav > ul > li {
-  display: block;
-  padding: 1.5rem;
+  gap: 1.5rem;
   font-size: 1.5rem;
-}
-/* header > nav > ul > li > a {
-  text-decoration: none;
-  color: black;
-} */
-a:hover {
-  color: #6967bf;
-  border-bottom: 1px dashed #6967bf;
 }
 /***********  MAIN  *********/
 main {
-  margin: 2rem 3rem;
+  margin: 0 3rem;
   /* padding: 1rem 0; */
 }
 ul.breadcrumb {
   display: flex;
-  list-style: none;
 }
 ul.breadcrumb > li {
   display: block;
@@ -88,7 +87,8 @@ article.ticket-status > a:hover {
   border-bottom: 0px;
 }
 
-article.ticket-status > a > button {
+article.ticket-status > a > button,
+form.serchForm {
   /* justify-self: flex-start; */
   width: 21rem;
   height: 3rem;
@@ -99,6 +99,17 @@ article.ticket-status > a > button {
   font-size: 1.6rem;
   font-weight: 400;
   cursor: pointer;
+}
+form.serchForm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+input[type="search"] {
+  width: 12rem;
+  height: 2rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
 }
 table {
   border-collapse: collapse;
@@ -119,7 +130,8 @@ thead th {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 2%;
-  background-color: #fff;
+  background-color: #ababa0;
+  opacity: 0.8;
 }
 thead th:first-child {
   width: 10%;
@@ -129,15 +141,103 @@ thead th:nth-child(2) {
 }
 th,
 td {
-  border-bottom: 1px solid #333;
+  /* border-bottom: 1px solid #333; */
+  padding: 8px;
 }
 tr:last-child {
   border-bottom: 2px solid #333;
 }
 tr:nth-of-type(even) {
-  background-color: aqua;
+  background-color: #e2e2dc;
+  opacity: 0.8;
+
   font-weight: semi-bold;
 }
+td > a {
+  /* border-bottom: 1px solid #333; */
+  color: #6967bf;
+}
+.message-history {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 80%;
+  align-items: center;
+}
+.send {
+  border: 2px solid #ffc919;
+  border-radius: 1rem;
+  width: max-content;
+  min-width: 300px;
+  text-align: center;
+}
+.send:nth-child(even) {
+  align-self: flex-end;
+}
+.ticket {
+  background-color: #b8b8ad;
+  min-height: 3rem;
+  border-radius: 1rem;
+}
+.ticket > div {
+  border-right: 2px dashed #e2e2dc;
+}
+.ticket > button {
+  border: none;
+  min-width: 2rem;
+}
+form.update-ticket {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 1rem auto;
+  gap: 1rem;
+}
+form.update-ticket > textarea {
+  width: 60%;
+  height: 5rem;
+  border-radius: 1rem;
+}
+form.update-ticket > button {
+  width: 21rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 1px solid #ffc919;
+  border-radius: 1rem;
+  background-color: #ffc919;
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+article.login 
+/* > a > button,
+form.serchForm  */ {
+  /* justify-self: flex-start; */
+  width: 21rem;
+  height: 3rem;
+  /* background-color: transparent; */
+  border: 1px solid #ffc919;
+  border-radius: 1rem;
+  background-color: #ffc919;
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+form.login-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+input[type="email"],
+input[type="password"] {
+  width: 12rem;
+  height: 2rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+}
+
 /********** Footer ********/
 footer {
   justify-content: center;

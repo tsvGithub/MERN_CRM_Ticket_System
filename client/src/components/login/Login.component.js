@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 const LoginForm = ({ handleChange, handleSubmit, formSwitcher, email, password }) => {
   return (
-    <article className="form">
-      <h1 className="title">Client Login</h1>
-      <form autocomplete="off" handleSubmit={handleSubmit}>
+    <article className="login">
+      <h1>Client Login</h1>
+      <form className="login-form" autocomplete="off" handleSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="email">Email Address</label>
           <input type="email" name="email" value={email} onChange={handleChange} placeholder="Enter Email" required />

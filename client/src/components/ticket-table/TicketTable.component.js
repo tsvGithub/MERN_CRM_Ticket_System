@@ -8,7 +8,7 @@ const TicketTable = ({ tickets }) => {
   console.log(tickets);
   return (
     <table>
-      <caption>{todaysDate} CRM Tickets Report </caption>
+      <caption>{todaysDate} Tickets Report </caption>
       <thead>
         <tr>
           <th></th>
@@ -24,7 +24,7 @@ const TicketTable = ({ tickets }) => {
               <td>{row.id}</td>
               {/* <td>{row.subject}</td> */}
               <td>
-                <Link to={`/ticket/${row.id}`}>{row.subject}</Link>{" "}
+                <Link to={`/ticket/${row.id}`}>{row.subject}</Link>
               </td>
               <td>{row.status}</td>
               <td>{row.addedAt}</td>

@@ -54,28 +54,28 @@ const Entry = () => {
   //==========================
   //================================
   return (
-    <div className="entry-page">
-      <main className="form-box">
-        {formLoad === "login" && (
-          <LoginForm
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
-            formSwitcher={formSwitcher}
-            email={email}
-            password={password}
-          />
-        )}
+    // <div className="entry-page">
+    <main>
+      {formLoad === "login" && (
+        <LoginForm
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          formSwitcher={formSwitcher}
+          email={email}
+          password={password}
+        />
+      )}
 
-        {formLoad === "reset" && (
-          <ResetPassword
-            handleChange={handleChange}
-            handleReset={handleReset}
-            formSwitcher={formSwitcher}
-            email={email}
-          />
-        )}
-      </main>
-    </div>
+      {formLoad === "reset" && (
+        <ResetPassword
+          handleChange={handleChange}
+          handleReset={handleReset}
+          formSwitcher={formSwitcher}
+          email={email}
+        />
+      )}
+    </main>
+    // </div>
   );
 };
 

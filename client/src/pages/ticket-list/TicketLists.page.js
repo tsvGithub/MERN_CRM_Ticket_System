@@ -25,17 +25,18 @@ const TicketLists = () => {
     setDisplayTicket(displayTickets);
   };
   return (
-    <div className="container">
+    <main>
       <Breadcrumb page="Ticket Lists" />
-      <Link to="/add-ticket">
-        <button className="btn">Add New Ticket</button>
-      </Link>
-      <SearchForm handleChange={handleChange} str={str} />
 
-      <hr />
+      <article className="ticket-status">
+        <Link to="/add-ticket">
+          <button className="btn">Add New Ticket</button>
+        </Link>
+        <SearchForm handleChange={handleChange} str={str} />
+      </article>
 
       <TicketTable tickets={displayTicket} />
-    </div>
+    </main>
   );
 };
 
