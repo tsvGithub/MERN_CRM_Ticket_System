@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 
 const AddTicketForm = ({ handleSubmit, handleChange, formData }) => {
   return (
-    <div className="container">
+    <article className="form">
       <h1>Add New Ticket</h1>
-      <form autocomplete="off" onSubmit={handleSubmit}>
+      <form className="add-ticket-form" autocomplete="off" onSubmit={handleSubmit}>
         <label htmlFor="subject">Subject</label>
         <input
-          // type="text"
+          type="text"
           name="subject"
           value={formData.subject}
           //minLength="3"
@@ -25,11 +25,11 @@ const AddTicketForm = ({ handleSubmit, handleChange, formData }) => {
 
         <label htmlFor="detail">Detail</label>
         <input type="textarea" name="detail" row="5" value={formData.detail} onChange={handleChange} required />
+        <button className="btn" onSubmit={handleSubmit} type="submit">
+          Send
+        </button>
       </form>
-      <button className="btn" onSubmit={handleSubmit} type="submit">
-        Send
-      </button>
-    </div>
+    </article>
   );
 };
 

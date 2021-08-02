@@ -3,32 +3,28 @@ import PropTypes from "prop-types";
 
 const LoginForm = ({ handleChange, handleSubmit, formSwitcher, email, password }) => {
   return (
-    <article className="login">
+    <article className="login form">
       <h1>Client Login</h1>
       <form className="login-form" autocomplete="off" handleSubmit={handleSubmit}>
-        <div className="form-control">
-          <label htmlFor="email">Email Address</label>
-          <input type="email" name="email" value={email} onChange={handleChange} placeholder="Enter Email" required />
+        <label htmlFor="email">Email Address</label>
+        <input type="email" name="email" value={email} onChange={handleChange} placeholder="Enter Email" required />
 
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-            placeholder="Enter Password"
-            required
-          />
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+          placeholder="Enter Password"
+          required
+        />
 
-          <button type="submit">Login</button>
-        </div>
+        <button type="submit">Login</button>
       </form>
 
-      <div>
-        <a href="#!" onClick={() => formSwitcher("reset")}>
-          Forgot password?
-        </a>
-      </div>
+      <a href="#!" className="forgetPassword" onClick={() => formSwitcher("reset")}>
+        Forgot password?
+      </a>
     </article>
   );
 };

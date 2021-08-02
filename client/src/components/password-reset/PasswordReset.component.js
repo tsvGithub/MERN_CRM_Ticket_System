@@ -3,22 +3,18 @@ import PropTypes from "prop-types";
 
 const ResetPassword = ({ handleChange, handleReset, formSwitcher, email }) => {
   return (
-    <article className="form">
-      <h1 className="title">Reset Password</h1>
-      <form autocomplete="off" onSubmit={handleReset}>
-        <div className="form-control">
-          <label htmlFor="email">Email Address</label>
-          <input type="email" name="email" value={email} onChange={handleChange} placeholder="Enter Email" required />
+    <article className="form login">
+      <h1>Reset Password</h1>
+      <form className="reset-form login-form" autocomplete="off" onSubmit={handleReset}>
+        <label htmlFor="email">Email Address</label>
+        <input type="email" name="email" value={email} onChange={handleChange} placeholder="Enter Email" required />
 
-          <button type="submit">Reset password</button>
-        </div>
+        <button type="submit">Reset password</button>
       </form>
 
-      <div>
-        <a href="#!" onClick={() => formSwitcher("login")}>
-          Login Now
-        </a>
-      </div>
+      <a className="forgetPassword login-now" href="#!" onClick={() => formSwitcher("login")}>
+        Login Now
+      </a>
     </article>
   );
 };
