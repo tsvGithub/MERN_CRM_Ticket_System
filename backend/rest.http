@@ -1,0 +1,24 @@
+### Ctrl+Alt+R on the link
+
+### User sing up endpoint:
+POST http://localhost:8080/v1/user
+Content-Type: application/json
+
+{
+"name": "First User",
+"company": "First company",
+"address": "Bercelona",
+"phone": "041000000",
+"email": "abc@abc.com",
+"password" : "password"
+}
+
+### User sign in endpoint
+
+POST http://localhost:8080/v1/user/login
+Content-Type: application/json
+
+{
+    "email": "abc@abc.com",
+    "password": "password"
+}

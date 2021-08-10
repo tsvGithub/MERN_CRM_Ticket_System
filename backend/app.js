@@ -12,7 +12,8 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 
 //API security
-app.use(helmet());
+//TODO: Uncomment for production!!!
+// app.use(helmet());
 
 //handle CORS errors
 app.use(cors());
